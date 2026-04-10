@@ -1,5 +1,6 @@
-const API_BASE = "http://127.0.0.1:5000";
-
+// const API_BASE = "http://127.0.0.1:5000";
+const API_BASE = "https://web-production-994b6.up.railway.app";
+//web-production-994b6.up.railway.app
 // Navigation Logic
 function showSection(sectionId) {
     document.querySelectorAll('section').forEach(s => s.classList.remove('active-section'));
