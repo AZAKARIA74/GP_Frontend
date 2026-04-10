@@ -1,0 +1,119 @@
+:root {
+    --primary: #2d6a4f;
+    --secondary: #40916c;
+    --bg-light: #f8f9fa;
+    --text-dark: #1b4332;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    background-color: #081c15;
+    color: white;
+    padding: 2rem 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.logo span { color: #52b788; }
+
+.nav-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #95d5b2;
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: 0.3s;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    background: #1b4332;
+    color: white;
+}
+
+/* Main Content Area */
+.content {
+    flex: 1;
+    padding: 3rem;
+}
+
+section { display: none; }
+section.active-section { display: block; }
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-top: 1.5rem;
+}
+
+/* Grids */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+/* Upload Area */
+.upload-zone {
+    border: 2px dashed #d8e2dc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-height: 200px;
+    transition: 0.3s;
+}
+
+.upload-zone:hover { border-color: var(--primary); background: #f1f8f4; }
+
+/* Inputs & Buttons */
+.input-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; }
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    grid-column: span 3;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.result-banner {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #e9f5ee;
+    font-weight: 600;
+    display: none;
+}
